@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      .main-content-area {
+        display: flex;
+      }
+      .main-content {
+        background-color: #fff;
+      }
+      aside {
+        width: 300px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 80px;
+        height: 100%;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+      }
+
+      .fixed {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+      }
+      .nav-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+      }
+
+      #about,
+      #choose,
+      #mission {
+        scroll-margin: 100px;
+      }
+
+      .parent,
+      .child1,
+      .child11 {
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        background-color: rgba(255, 0, 0, 0.3);
+        position: relative;
+        transition: 0.5s;
+      }
+      .parent:hover {
+        transform: scale(1.2);
+      }
+
+      .child1 {
+        position: absolute;
+        transform: scale(0.8);
+      }
+
+      .child11 {
+        position: absolute;
+        transform: scale(0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>Welcome to learn position sticky css</p>
+    </section>
+    <header>
+      <hr />
+      <div class="nav-area">
+        <h2>Header</h2>
+        <ul class="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#choose">Why Choose Us</a></li>
+          <li><a href="#mission">Our Mission</a></li>
+        </ul>
+      </div>
+      <hr />
+    </header>
+
+    <div class="main-content-area">
+      <aside>
+        <ul>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+        </ul>
+      </aside>
+
+      <section class="main-content">
+        <div class="parent">
+          <div class="child1">
+            <div class="child11"></div>
+          </div>
+        </div>
+        <h1>Main Content</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+          distinctio laboriosam ullam autem adipisci sunt ea, soluta recusandae
+          harum nesciunt culpa facilis aspernatur mollitia saepe minima
+          repellendus perferendis, illum voluptas!
+        </p>
+        <div id="about">
+          <h2>About Us</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+        </div>
+
+        <div id="choose">
+          <h2>Why Choose Us</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eligendi
+          incidunt itaque quis. Molestiae necessitatibus eius quas minus in sed!
+          Amet delectus doloremque quibusdam mollitia! Iste sunt fugit excepturi
+          aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+          porro ea repellat atque quod. Debitis quas praesentium, explicabo odio
+          eveniet labore, voluptatibus nobis corporis ad sapiente accusamus
+          error consequatur dignissimos!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eligendi
+          incidunt itaque quis. Molestiae necessitatibus eius quas minus in sed!
+          Amet delectus doloremque quibusdam mollitia! Iste sunt fugit excepturi
+          aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+          porro ea repellat atque quod. Debitis quas praesentium, explicabo odio
+          eveniet labore, voluptatibus nobis corporis ad sapiente accusamus
+          error consequatur dignissimos!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eligendi
+          incidunt itaque quis. Molestiae necessitatibus eius quas minus in sed!
+          Amet delectus doloremque quibusdam mollitia! Iste sunt fugit excepturi
+          aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+          porro ea repellat atque quod. Debitis quas praesentium, explicabo odio
+          eveniet labore, voluptatibus nobis corporis ad sapiente accusamus
+          error consequatur dignissimos!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eligendi
+          incidunt itaque quis. Molestiae necessitatibus eius quas minus in sed!
+          Amet delectus doloremque quibusdam mollitia! Iste sunt fugit excepturi
+          aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+          porro ea repellat atque quod. Debitis quas praesentium, explicabo odio
+          eveniet labore, voluptatibus nobis corporis ad sapiente accusamus
+          error consequatur dignissimos!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab eligendi
+          incidunt itaque quis. Molestiae necessitatibus eius quas minus in sed!
+          Amet delectus doloremque quibusdam mollitia! Iste sunt fugit excepturi
+          aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+          porro ea repellat atque quod. Debitis quas praesentium, explicabo odio
+          eveniet labore, voluptatibus nobis corporis ad sapiente accusamus
+          error consequatur dignissimos!
+        </p>
+        <div id="mission">
+          <h2>Our Mission</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
+            eligendi incidunt itaque quis. Molestiae necessitatibus eius quas
+            minus in sed! Amet delectus doloremque quibusdam mollitia! Iste sunt
+            fugit excepturi aut. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aut porro ea repellat atque quod. Debitis quas
+            praesentium, explicabo odio eveniet labore, voluptatibus nobis
+            corporis ad sapiente accusamus error consequatur dignissimos!
+          </p>
+        </div>
+      </section>
+
+      <aside>
+        <ul>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+          <li>List1</li>
+        </ul>
+      </aside>
+    </div>
+
+    <a href="#" class="fixed">Scroll top</a>
+  </body>
+</html>

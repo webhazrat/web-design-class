@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ::backdrop {
+        background: rgb(0, 0, 0, 0.8);
+      }
+      [data-id] {
+        color: red;
+      }
+
+      p {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body style="margin: 0">
+    <button id="actionBtn" onclick="modal()" data-id="sghjadtjad">
+      Open Dialog
+    </button>
+
+    <div
+      style="
+        max-width: 400px;
+        margin: auto;
+        background-image: url('assets/images/bg pattern.jpg');
+      "
+    >
+      <h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto rem
+        voluptas, odio et distinctio autem velit placeat aut necessitatibus,
+        commodi at magni alias, nesciunt error ut ad eveniet nihil dolores.
+      </h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum
+        est. Qui facilis eligendi fugit quas facere rerum, sequi ut voluptatem
+        expedita vero similique, atque quasi labore nostrum totam eos. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Aperiam officiis
+        deserunt accusantium. Nesciunt delectus vitae provident omnis,
+        consequatur laborum tempore quas natus impedit fuga nisi repellendus
+        quam voluptatem ea quos. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Alias ad iste fugit possimus nobis veniam
+        necessitatibus ullam consectetur adipisci error, vel id? Earum
+        reiciendis error totam rerum nam, iusto possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum
+        est. Qui facilis eligendi fugit quas facere rerum, sequi ut voluptatem
+        expedita vero similique, atque quasi labore nostrum totam eos. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Aperiam officiis
+        deserunt accusantium. Nesciunt delectus vitae provident omnis,
+        consequatur laborum tempore quas natus impedit fuga nisi repellendus
+        quam voluptatem ea quos. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Alias ad iste fugit possimus nobis veniam
+        necessitatibus ullam consectetur adipisci error, vel id? Earum
+        reiciendis error totam rerum nam, iusto possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum
+        est. Qui facilis eligendi fugit quas facere rerum, sequi ut voluptatem
+        expedita vero similique, atque quasi labore nostrum totam eos. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Aperiam officiis
+        deserunt accusantium. Nesciunt delectus vitae provident omnis,
+        consequatur laborum tempore quas natus impedit fuga nisi repellendus
+        quam voluptatem ea quos. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Alias ad iste fugit possimus nobis veniam
+        necessitatibus ullam consectetur adipisci error, vel id? Earum
+        reiciendis error totam rerum nam, iusto possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum
+        est. Qui facilis eligendi fugit quas facere rerum, sequi ut voluptatem
+        expedita vero similique, atque quasi labore nostrum totam eos. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Aperiam officiis
+        deserunt accusantium. Nesciunt delectus vitae provident omnis,
+        consequatur laborum tempore quas natus impedit fuga nisi repellendus
+        quam voluptatem ea quos. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Alias ad iste fugit possimus nobis veniam
+        necessitatibus ullam consectetur adipisci error, vel id? Earum
+        reiciendis error totam rerum nam, iusto possimus.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, earum
+        est. Qui facilis eligendi fugit quas facere rerum, sequi ut voluptatem
+        expedita vero similique, atque quasi labore nostrum totam eos. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Aperiam officiis
+        deserunt accusantium. Nesciunt delectus vitae provident omnis,
+        consequatur laborum tempore quas natus impedit fuga nisi repellendus
+        quam voluptatem ea quos. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Alias ad iste fugit possimus nobis veniam
+        necessitatibus ullam consectetur adipisci error, vel id? Earum
+        reiciendis error totam rerum nam, iusto possimus.
+      </p>
+    </div>
+    <dialog id="dialog">
+      <button onclick="hide()">Close</button>
+      <div>
+        <h1>Hi, I am dialog</h1>
+      </div>
+    </dialog>
+
+    <script>
+      const actionBtn = document.getElementById("actionBtn");
+      const id = actionBtn.getAttribute("data-id");
+
+      console.log(id);
+
+      const dialog = document.getElementById("dialog");
+
+      function modal() {
+        dialog.showModal();
+      }
+
+      function hide() {
+        dialog.close();
+      }
+    </script>
+  </body>
+</html>
