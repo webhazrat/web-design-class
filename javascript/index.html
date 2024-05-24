@@ -9,9 +9,27 @@
     <h2></h2>
     <button>Delete</button>
     <input type="file" />
+
     <script>
-      //   alert("Test alert");
-      //   confirm("Test confirm");
+      "use strict";
+
+      // let, const, var
+      // declare, reassign
+
+      // let can't declare multiple times
+      // but you can reassign value multiple times
+      let message; //declare
+      message = "H";
+      message = "K";
+
+      // you have to declare and assign immediately for const
+      // you can't redeclare or reassign
+      const name = "Mr. X";
+      //name = "Mr. Y";
+
+      // var
+      var age = 32;
+      var age = 40;
 
       const width = innerWidth;
       const height = innerHeight;
@@ -30,6 +48,10 @@
           return "test";
         },
       };
+
+      shippingAddress;
+
+      console.log(message);
     </script>
   </body>
 </html>
