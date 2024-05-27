@@ -1,3 +1,5 @@
+// 1. Primitive, not-primitive
+
 // Number
 let qty = "10";
 let price = 50;
@@ -51,3 +53,18 @@ operator: typeof <whichTypeDoYouWantToKnow>
 method: parseInt(<>), parseFloat(<>)
 
 */
+
+let person = {};
+person.name = "Mr. Y";
+person.walk = function () {
+  return "Yes";
+};
+
+console.log(person.walk);
+
+let phones = [];
+phones[0] = "Apple";
+phones[1] = "Honor";
+phones[2] = "Samsung";
+
+console.log(phones);
