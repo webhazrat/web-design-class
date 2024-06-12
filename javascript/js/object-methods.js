@@ -70,3 +70,13 @@ console.log(c == d);
 const updatedUser3 = { ...user3, ...course };
 const updatedUser4 = Object.assign({}, course);
 console.log(updatedUser4);
+
+const cal = {
+  fN: 100,
+  sN: 200,
+  sum: function () {
+    return this.fN + this.sN;
+  },
+};
+
+console.log(cal.sum());
