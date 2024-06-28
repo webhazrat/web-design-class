@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .blockParent {
+        text-align: center;
+      }
+      #block {
+        height: 200px;
+        width: 200px;
+        background-color: #f00;
+        margin: 15px auto;
+      }
+
+      nav {
+        display: flex;
+        gap: 15px;
+      }
+
+      .dropdown {
+        position: relative;
+      }
+      .dropdown ul {
+        position: absolute;
+        left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: red;
+        width: 200px;
+        display: none;
+      }
+      .dropdown.show ul {
+        display: block;
+      }
+      .dropdown ul li a {
+        color: #fff;
+        display: block;
+        padding: 6px 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Events bubbling -->
+    <form onclick="triggerForm()">
+      Form
+      <div onclick="triggerDiv()">
+        Div
+        <p onclick="triggerP(event)">P</p>
+      </div>
+    </form>
+
+    <!-- Event init -->
+    <button id="delBtn">Delete</button>
+
+    <!-- Event default prevent -->
+    <ul onclick="view(event)">
+      <li><a href="#">List1</a></li>
+      <li><a href="#">List2</a></li>
+      <li><a href="#">List3</a></li>
+    </ul>
+
+    <form id="userForm">
+      <input type="text" name="name" />
+      <input type="text" name="name2" />
+      <input type="text" name="name3" />
+      <button>Submit</button>
+    </form>
+
+    <div class="blockParent">
+      <div id="block"></div>
+      <button onclick="action(event)">Circle</button>
+      <button onclick="action(event)">Rectangle</button>
+    </div>
+
+    <nav>
+      <div class="dropdown">
+        <a href="#">Getting Started</a>
+        <ul>
+          <li><a href="#">Installation</a></li>
+          <li><a href="#">Fonts</a></li>
+          <li><a href="#">Icons</a></li>
+          <li><a href="#">Animation</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="#">Support</a>
+        <ul>
+          <li><a href="#">Contact Information</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <script src="js/events.js"></script>
+  </body>
+</html>
