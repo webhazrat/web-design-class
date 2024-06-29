@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        --mainNavHeight: 50px;
+        --sideNavWidth: 250px;
+      }
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #nav {
+        padding: 15px;
+        background-color: #111;
+        transition: 0.5s;
+        height: var(--mainNavHeight);
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+      #menuBar {
+        display: none;
+        color: #fff;
+      }
+      /* #nav.scroll {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        animation: slideDown 0.5s forwards;
+      } */
+      #nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 15px;
+      }
+      #nav ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      #scrollTop {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: 1px solid #111;
+        border-radius: 100%;
+        position: fixed;
+        bottom: -50px;
+        right: 50px;
+        transition: 0.5s;
+      }
+      #scrollTop.show {
+        bottom: 50px;
+      }
+
+      /* @keyframes slideDown {
+        from {
+          top: -100px;
+        }
+        to {
+          top: 0;
+        }
+      } */
+
+      /* sidenav */
+      #sideNav::-webkit-scrollbar {
+        width: 7px;
+      }
+      #sideNav::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 33px;
+      }
+      #sideNav:hover::-webkit-scrollbar-thumb {
+        background-color: #666;
+      }
+      #sideNav {
+        width: var(--sideNavWidth);
+        background-color: #222;
+        padding: 15px 0;
+        height: calc(100vh - var(--mainNavHeight));
+        position: fixed;
+        top: var(--mainNavHeight);
+        left: 0;
+        transition: 0.5s;
+        overflow-y: auto;
+      }
+      #sideNav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #sideNav ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .main-content {
+        padding: 15px;
+        padding-left: calc(var(--sideNavWidth) + 15px);
+      }
+
+      @media (max-width: 767px) {
+        #sideNav {
+          left: calc(var(--sideNavWidth) * -1);
+        }
+        #sideNav.show {
+          left: 0;
+        }
+        .main-content {
+          padding-left: 15px;
+        }
+        #menuBar {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" id="scrollTop">^</a>
+    <nav id="nav">
+      <a href="#" id="menuBar">Menu</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+      </ul>
+    </nav>
+
+    <nav id="sideNav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Projects</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Get Quote</a></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, illo.
+        Quia quibusdam id unde rerum quo, reiciendis alias quod totam modi minus
+        quas dolorum quae odit quisquam iusto error odio.
+      </p>
+    </div>
+    <script src="js/scrolling.js"></script>
+  </body>
+</html>
