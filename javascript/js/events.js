@@ -52,3 +52,12 @@ dropdowns.forEach((dropdown) => {
     dropdown.classList.toggle("show");
   });
 });
+
+document.addEventListener("click", function (event) {
+  let target = event.target;
+  if (!target.closest(".dropdown")) {
+    dropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("show");
+    });
+  }
+});
