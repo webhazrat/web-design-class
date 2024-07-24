@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      main {
+        max-width: 800px;
+        margin: 100px auto;
+      }
+      form {
+        text-align: center;
+      }
+      .task-area {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        place-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form id="addTaskForm">
+        <input type="text" id="task" name="task" />
+        <button type="submit">Add task</button>
+      </form>
+
+      <div class="task-area">
+        <div>
+          <h4>Incompleted Tasks</h4>
+          <ul id="incompletedList"></ul>
+        </div>
+        <div>
+          <h4>Completed Tasks</h4>
+          <ul id="completedList"></ul>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
